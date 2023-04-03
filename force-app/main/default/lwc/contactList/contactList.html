@@ -1,0 +1,20 @@
+<template>
+        <lightning-card class="space">
+        <!--       <template if:true={handleDisplay}> -->
+            <lightning-badge ></lightning-badge>
+            <lightning-layout multiple-columns="true" >
+                <template for:each={contactList.data} for:item="contact">
+                    <lightning-layout-item key={contactList.Id}  class="slds-var-p-around_x-small">  
+                        <h1>{contact.FirstName}</h1>
+                        <h1>{contact.LastName}</h1>
+                        <h1>{contact.Email}</h1>
+                    </lightning-layout-item>
+                </template>
+            </lightning-layout>
+      <!--     </template> -->
+     <!--  
+        <template if:false={handleDisplay}>
+            <p>Press The Button</p>
+     </template>  -->
+        </lightning-card>
+</template>

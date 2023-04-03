@@ -1,0 +1,30 @@
+<template>
+    <lightning-card>
+
+        <lightning-record-form object-api-name={objectApiName} fields={fields} onsuccess={handleContactCreation}> </lightning-record-form>
+
+    </lightning-card>
+
+    <lightning-card>
+
+        <lightning-button 
+            variant="brand-outline" 
+            label="Dispaly Current Contacts" 
+            title="Primary action with lighter look" 
+            onclick={handleDisplayContacts} 
+            class="slds-m-left_x-small" >
+        </lightning-button>
+
+ 
+            <template lwc:if={displayContacts} >
+                <c-contact-list></c-contact-list>     
+            </template>
+       
+            <template lwc:else>
+                <p> List of Contacts are hidden</p>
+            </template>
+     
+       
+
+    </lightning-card>
+</template>
